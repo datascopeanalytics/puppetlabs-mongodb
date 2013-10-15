@@ -8,7 +8,7 @@ var rsconf = {
             <% if member['arbiterOnly'] -%>
             "arbiterOnly": <%= member['arbiterOnly'] %>
             <% end -%>
-        }<%= ',' if i < (@members.size - 1) %>
+        }<%= ',' if index < (@members.size - 1) %>
         <% end -%>
     ]
 }
