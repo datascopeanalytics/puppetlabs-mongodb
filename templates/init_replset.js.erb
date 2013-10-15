@@ -4,7 +4,7 @@ var rsconf = {
         <% members.each_with_index do |member, index| -%>
         {
             "_id": <%= index %>,
-            "host": '<%= member['host']host %>',
+            "host": '<%= member['host'] %>',
             <% if member['arbiterOnly'] -%>
             "arbiterOnly": <%= member['arbiterOnly'] %>
             <% end -%>
