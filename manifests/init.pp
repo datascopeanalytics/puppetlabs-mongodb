@@ -108,11 +108,6 @@ class mongodb (
     name       => $servicename,
     ensure     => running,
     enable     => true,
-    start      => 'mongod --config /etc/mongodb.conf',
-    stop       => 'mongod --config /etc/mongodb.conf --shutdown',
-    hasstatus  => false,
-    hasrestart => false,
-    status     => 'if [ $(pgrep mongod) ] ; then echo 0 ; else echo 1 ; fi',
     subscribe  => File['/etc/mongodb.conf'],
   }
 }
