@@ -10,7 +10,7 @@ class mongodb::sources::apt inherits mongodb::params {
   apt::source { '10gen':
     location    => $location,
     release     => 'dist',
-    repos       => '10gen',
+    repos       => 'mongodb',
     key         => '7F0CEB10',
     key_server  => 'keyserver.ubuntu.com',
     include_src => false,
