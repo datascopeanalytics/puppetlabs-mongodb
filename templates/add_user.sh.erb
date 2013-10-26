@@ -28,7 +28,7 @@ else
 
     # run the mongo script to create the user. need to sleep
     # momentarily before running script
-    sleep 2s
+    until lsof -iTCP:<%= @port %>; do sleep 1; done
     mongo <%= @filename_post24 %>
 
     # re-enable authentication and restart the mongo service
