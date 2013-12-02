@@ -84,11 +84,9 @@ class mongodb (
     $package = $mongodb::params::package
   }
 
-  if $version {
-    $version = $version
-  } else {
-    $version = 'installed'
-  }
+  if !$version {
+    $version = 'installed
+  } 
 
   package { 'mongodb-10gen':
     name   => $package,
