@@ -85,7 +85,7 @@ class mongodb (
   }
 
   if !$version {
-    $version = 'installed
+    $version = 'installed'
   } 
 
   package { 'mongodb-10gen':
