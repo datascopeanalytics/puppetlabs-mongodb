@@ -126,3 +126,8 @@ slaveDelay = <%= @slaveDelay %>
 # Configure ReplicaSet membership
 replSet = <%= @replSet %>
 <% end -%>
+
+<% if @quiet -%>
+# allow mongo to run quietly
+quiet = <%= @quiet %>
+<% end -%>
