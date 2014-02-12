@@ -68,7 +68,8 @@ class mongodb (
   $only            = undef,
   $slaveDelay      = undef,
   $replSet         = undef,
-  $version         = $mongodb::params::version
+  $version         = $mongodb::params::version,
+  $quiet           = false,
 ) inherits mongodb::params {
 
   if $enable_10gen {
