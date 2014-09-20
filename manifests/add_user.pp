@@ -13,6 +13,14 @@ define mongodb::add_user(
   }
 
   include mongodb
+  $port = $mongodb::port
+
+  # make sure lsof is installed if it hasn't been already 
+  if !defined( Package['lsof'] ) {
+    package { 'lsof': 
+      ensure => installed,
+    }    
+  }
   
   # create two separate javascript files depending on whether this
   # version of mongod is using 2.4 or earlier
